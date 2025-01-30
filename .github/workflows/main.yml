@@ -1,4 +1,4 @@
-name: Update
+name: Update me
 
 on:
   workflow_dispatch:
