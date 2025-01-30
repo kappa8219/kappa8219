@@ -1,0 +1,15 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "*/2 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo "Nothing here" #curl -O meme.html
+      - uses: stefanzweifel/git-auto-commit-action@v4
