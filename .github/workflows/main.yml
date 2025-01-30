@@ -1,9 +1,9 @@
-name: Update me
+name: Update me tonight
 
 on:
   workflow_dispatch:
   schedule:
-  - cron: "*/2 * * * *"
+  - cron: "0 * * * *"
 
 jobs:
   build:
