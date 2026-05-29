@@ -111,8 +111,8 @@ def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
 
     top_rows = rows[:limit]
     max_count = max((count for _, count in top_rows), default=0)
-    min_size = 14
-    max_size = 36
+    min_size = 10
+    max_size = 22
 
     lines = ["```mermaid", "graph LR", "  classDef tag fill:#f6f8fa,stroke:#d0d7de,color:#24292f;"]
     for idx, (repo, count) in enumerate(top_rows, start=1):
