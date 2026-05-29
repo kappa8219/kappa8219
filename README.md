@@ -1,7 +1,3 @@
-# Hi, I'm @kappa8219
-
-## Most active projects I participated in
-
 _This list updates automatically from my GitHub activity._
 
 <!--START_SECTION:participated-projects-->
