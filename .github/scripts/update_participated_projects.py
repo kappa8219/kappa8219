@@ -100,13 +100,17 @@ def build_section(rows: list[tuple[str, int]], from_events: bool, limit: int = 1
     if not rows:
         return "_No participation data found._"
 
-    lines = []
+    lines = [
+        "| Repository | Reason | Activity |",
+        "|---|---|---:|",
+    ]
     for repo, count in rows[:limit]:
         url = f"https://github.com/{repo}"
         if from_events:
-            lines.append(f"- [{repo}]({url}) — {count} recent public activities")
+            activity = f"{count} recent public activities"
         else:
-            lines.append(f"- [{repo}]({url})")
+            activity = "Contributed repository"
+        lines.append(f"| [{repo}]({url}) | participating | {activity} |")
     return "\n".join(lines)
 
 
