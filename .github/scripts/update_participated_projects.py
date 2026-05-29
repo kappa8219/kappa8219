@@ -111,8 +111,9 @@ def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
 
     top_rows = rows[:limit]
     max_count = max((count for _, count in top_rows), default=0)
-    min_size = 10
-    max_size = 22
+    min_size = 12
+    max_size = 28
+    cols = 3
 
     lines = [
         "```mermaid",
@@ -120,29 +121,22 @@ def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
         "  classDef tag fill:#f6f8fa,stroke:#d0d7de,color:#24292f;",
         "  linkStyle default stroke:transparent,stroke-width:0px;",
     ]
-    row_size = 3
-    for row_idx in range(0, len(top_rows), row_size):
-        row_number = (row_idx // row_size) + 1
-        row_items = top_rows[row_idx : row_idx + row_size]
-        lines.append(f"  subgraph row{row_number}[ ]")
-        lines.append("    direction LR")
-        node_ids = []
-        for col_idx, (repo, count) in enumerate(row_items, start=1):
-            idx = row_idx + col_idx
-            node_id = f"p{idx}"
-            node_ids.append(node_id)
-            if max_count > 0:
-                size = min_size + int((count / max_count) * (max_size - min_size))
-            else:
-                size = min_size
-            lines.append(f'    {node_id}["{repo}"]:::tag')
-            lines.append(f"    style {node_id} font-size:{size}px")
-        if len(node_ids) >= 2:
-            lines.append(f"    {' --- '.join(node_ids)}")
-        lines.append("  end")
-        lines.append(
-            f"  style row{row_number} fill:transparent,stroke:transparent,color:transparent;"
-        )
+    node_ids = []
+    for idx, (repo, count) in enumerate(top_rows, start=1):
+        node_id = f"p{idx}"
+        node_ids.append(node_id)
+        if max_count > 0:
+            size = min_size + int((count / max_count) * (max_size - min_size))
+        else:
+            size = min_size
+        lines.append(f'  {node_id}["{repo}"]:::tag')
+        lines.append(f"  style {node_id} font-size:{size}px")
+
+    for i, node_id in enumerate(node_ids):
+        if (i + 1) % cols != 0 and i + 1 < len(node_ids):
+            lines.append(f"  {node_id} --- {node_ids[i + 1]}")
+        if i + cols < len(node_ids):
+            lines.append(f"  {node_id} --- {node_ids[i + cols]}")
     lines.append("```")
     return "\n".join(lines)
 
