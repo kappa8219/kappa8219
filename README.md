@@ -2,27 +2,27 @@ _This list updates automatically from my GitHub activity._
 
 <!--START_SECTION:participated-projects-->
 ```mermaid
-graph TD
-  projects[Projects]
-  p1["freelensapp/freelens"]
-  projects --> p1
-  p2["kappa8219/freelens"]
-  projects --> p2
-  p3["kappa8219/gnome-clipboard-history"]
-  projects --> p3
-  p4["DependencyTrack/dependency-track"]
-  projects --> p4
-  p5["SUPERCILEX/gnome-clipboard-history"]
-  projects --> p5
-  p6["0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo"]
-  projects --> p6
-  p7["Tudmotu/gnome-shell-extension-clipboard-indicator"]
-  projects --> p7
-  p8["kyverno/policies"]
-  projects --> p8
-  p9["kappa8219/policies"]
-  projects --> p9
-  p10["awslabs/amazon-eks-ami"]
-  projects --> p10
+graph LR
+  classDef tag fill:#f6f8fa,stroke:#d0d7de,color:#24292f;
+  p1["freelensapp/freelens"]:::tag
+  style p1 font-size:36px
+  p2["kappa8219/freelens"]:::tag
+  style p2 font-size:32px
+  p3["kappa8219/gnome-clipboard-history"]:::tag
+  style p3 font-size:26px
+  p4["DependencyTrack/dependency-track"]:::tag
+  style p4 font-size:26px
+  p5["SUPERCILEX/gnome-clipboard-history"]:::tag
+  style p5 font-size:23px
+  p6["0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo"]:::tag
+  style p6 font-size:23px
+  p7["Tudmotu/gnome-shell-extension-clipboard-indicator"]:::tag
+  style p7 font-size:20px
+  p8["kyverno/policies"]:::tag
+  style p8 font-size:20px
+  p9["kappa8219/policies"]:::tag
+  style p9 font-size:20px
+  p10["awslabs/amazon-eks-ami"]:::tag
+  style p10 font-size:20px
 ```
 <!--END_SECTION:participated-projects-->

@@ -106,10 +106,19 @@ def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
     if not rows:
         return "_No participation data found._"
 
-    lines = ["```mermaid", "graph TD", "  projects[Projects]"]
-    for idx, (repo, _) in enumerate(rows[:limit], start=1):
-        lines.append(f'  p{idx}["{repo}"]')
-        lines.append(f"  projects --> p{idx}")
+    top_rows = rows[:limit]
+    max_count = max((count for _, count in top_rows), default=0)
+    min_size = 14
+    max_size = 36
+
+    lines = ["```mermaid", "graph LR", "  classDef tag fill:#f6f8fa,stroke:#d0d7de,color:#24292f;"]
+    for idx, (repo, count) in enumerate(top_rows, start=1):
+        if max_count > 0:
+            size = min_size + int((count / max_count) * (max_size - min_size))
+        else:
+            size = min_size
+        lines.append(f'  p{idx}["{repo}"]:::tag')
+        lines.append(f"  style p{idx} font-size:{size}px")
     lines.append("```")
     return "\n".join(lines)
 
