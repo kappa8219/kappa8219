@@ -1,16 +1,28 @@
 _This list updates automatically from my GitHub activity._
 
 <!--START_SECTION:participated-projects-->
-| Repository | Reason | Activity |
-|---|---|---:|
-| [freelensapp/freelens](https://github.com/freelensapp/freelens) | participating | 7 recent public activities |
-| [kappa8219/freelens](https://github.com/kappa8219/freelens) | participating | 6 recent public activities |
-| [kappa8219/gnome-clipboard-history](https://github.com/kappa8219/gnome-clipboard-history) | participating | 4 recent public activities |
-| [DependencyTrack/dependency-track](https://github.com/DependencyTrack/dependency-track) | participating | 4 recent public activities |
-| [SUPERCILEX/gnome-clipboard-history](https://github.com/SUPERCILEX/gnome-clipboard-history) | participating | 3 recent public activities |
-| [0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo](https://github.com/0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo) | participating | 3 recent public activities |
-| [Tudmotu/gnome-shell-extension-clipboard-indicator](https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator) | participating | 2 recent public activities |
-| [kyverno/policies](https://github.com/kyverno/policies) | participating | 2 recent public activities |
-| [kappa8219/policies](https://github.com/kappa8219/policies) | participating | 2 recent public activities |
-| [awslabs/amazon-eks-ami](https://github.com/awslabs/amazon-eks-ami) | participating | 2 recent public activities |
+```mermaid
+graph TD
+  projects[Projects]
+  p1["freelensapp/freelens"]
+  projects --> p1
+  p2["kappa8219/freelens"]
+  projects --> p2
+  p3["kappa8219/gnome-clipboard-history"]
+  projects --> p3
+  p4["DependencyTrack/dependency-track"]
+  projects --> p4
+  p5["SUPERCILEX/gnome-clipboard-history"]
+  projects --> p5
+  p6["0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo"]
+  projects --> p6
+  p7["Tudmotu/gnome-shell-extension-clipboard-indicator"]
+  projects --> p7
+  p8["kyverno/policies"]
+  projects --> p8
+  p9["kappa8219/policies"]
+  projects --> p9
+  p10["awslabs/amazon-eks-ami"]
+  projects --> p10
+```
 <!--END_SECTION:participated-projects-->
