@@ -14,6 +14,11 @@ REST_API = "https://api.github.com"
 GRAPHQL_API = "https://api.github.com/graphql"
 
 
+def is_owned_by_user(repo_full_name: str, login: str) -> bool:
+    owner = repo_full_name.split("/", 1)[0] if "/" in repo_full_name else ""
+    return owner.lower() == login.lower()
+
+
 def api_get_json(url: str, token: str) -> object:
     req = urllib.request.Request(
         url,
@@ -56,7 +61,6 @@ def graphql_query(token: str, query: str, variables: dict) -> dict:
 
 def recent_public_activity(login: str, token: str, max_pages: int = 10) -> list[tuple[str, int]]:
     counts = defaultdict(int)
-    profile_repo = f"{login}/{login}"
     for page in range(1, max_pages + 1):
         query = urllib.parse.urlencode({"per_page": 100, "page": page})
         url = f"{REST_API}/users/{login}/events/public?{query}"
@@ -66,7 +70,7 @@ def recent_public_activity(login: str, token: str, max_pages: int = 10) -> list[
 
         for event in events:
             repo = (event.get("repo") or {}).get("name")
-            if repo and repo != profile_repo:
+            if repo and not is_owned_by_user(repo, login):
                 counts[repo] += 1
 
     return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
@@ -94,11 +98,10 @@ def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
         (((data.get("data") or {}).get("user") or {}).get("repositoriesContributedTo") or {}).get("nodes")
         or []
     )
-    profile_repo = f"{login}/{login}"
     return [
         (node["nameWithOwner"], 0)
         for node in nodes
-        if node and node.get("nameWithOwner") and node["nameWithOwner"] != profile_repo
+        if node and node.get("nameWithOwner") and not is_owned_by_user(node["nameWithOwner"], login)
     ]
 
 
