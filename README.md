@@ -7,23 +7,23 @@ graph TB
   linkStyle default stroke:transparent,stroke-width:0px;
   p1["freelensapp/freelens"]:::tag
   style p1 font-size:28px
-  p2["DependencyTrack/dependency-track"]:::tag
-  style p2 font-size:21px
-  p3["SUPERCILEX/gnome-clipboard-history"]:::tag
-  style p3 font-size:18px
-  p4["0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo"]:::tag
-  style p4 font-size:18px
-  p5["Tudmotu/gnome-shell-extension-clipboard-indicator"]:::tag
-  style p5 font-size:16px
-  p6["kyverno/policies"]:::tag
-  style p6 font-size:16px
-  p7["awslabs/amazon-eks-ami"]:::tag
-  style p7 font-size:16px
-  p8["aws/amazon-ecs-ami"]:::tag
-  style p8 font-size:16px
-  p9["valkey-io/valkey-operator"]:::tag
+  p2["0xdeadbeefnetwork/Copy_Fail2-Electric_Boogaloo"]:::tag
+  style p2 font-size:20px
+  p3["kyverno/policies"]:::tag
+  style p3 font-size:17px
+  p4["DependencyTrack/dependency-track"]:::tag
+  style p4 font-size:17px
+  p5["awslabs/amazon-eks-ami"]:::tag
+  style p5 font-size:17px
+  p6["aws/amazon-ecs-ami"]:::tag
+  style p6 font-size:17px
+  p7["valkey-io/valkey-operator"]:::tag
+  style p7 font-size:14px
+  p8["V4bel/dirtyfrag"]:::tag
+  style p8 font-size:14px
+  p9["UCSBarchlab/OpenTPU"]:::tag
   style p9 font-size:14px
-  p10["V4bel/dirtyfrag"]:::tag
+  p10["Twingate/helm-charts"]:::tag
   style p10 font-size:14px
   p1 --- p2
   p1 --- p4
