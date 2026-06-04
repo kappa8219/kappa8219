@@ -76,11 +76,16 @@ def recent_public_activity(login: str, token: str, max_pages: int = 10) -> list[
     return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
 
 
-def issue_comment_activity(login: str, token: str, max_pages: int = 10) -> list[tuple[str, int]]:
+def issue_comment_activity(
+    login: str, token: str, max_pages: int = 10
+) -> tuple[list[tuple[str, int]], dict[str, list[tuple[int, str]]]]:
     counts = defaultdict(int)
+    issue_links = defaultdict(dict)
     query = f"commenter:{login} is:issue"
     for page in range(1, max_pages + 1):
-        params = urllib.parse.urlencode({"q": query, "per_page": 100, "page": page})
+        params = urllib.parse.urlencode(
+            {"q": query, "per_page": 100, "page": page, "sort": "updated", "order": "desc"}
+        )
         url = f"{REST_API}/search/issues?{params}"
         result = api_get_json(url, token)
         if not isinstance(result, dict):
@@ -99,8 +104,17 @@ def issue_comment_activity(login: str, token: str, max_pages: int = 10) -> list[
             repo = repository_url.split("/repos/", 1)[1]
             if repo and not is_owned_by_user(repo, login):
                 counts[repo] += 1
+                number = item.get("number")
+                html_url = item.get("html_url")
+                if isinstance(number, int) and isinstance(html_url, str):
+                    issue_links[repo][number] = html_url
 
-    return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
+    sorted_counts = sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
+    sorted_links = {
+        repo: sorted(repo_links.items(), key=lambda it: it[0], reverse=True)
+        for repo, repo_links in issue_links.items()
+    }
+    return sorted_counts, sorted_links
 
 
 def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
@@ -132,7 +146,9 @@ def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
     ]
 
 
-def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
+def build_section(
+    rows: list[tuple[str, int]], issue_links: dict[str, list[tuple[int, str]]], limit: int = 10
+) -> str:
     if not rows:
         return "_No participation data found._"
 
@@ -165,6 +181,15 @@ def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
         if i + cols < len(node_ids):
             lines.append(f"  {node_id} --- {node_ids[i + cols]}")
     lines.append("```")
+    lines.append("")
+    lines.append("Issue links:")
+    for repo, _ in top_rows:
+        repo_issue_links = issue_links.get(repo, [])
+        if repo_issue_links:
+            links_text = ", ".join(f"[#{number}]({url})" for number, url in repo_issue_links[:5])
+            lines.append(f"- `{repo}`: {links_text}")
+        else:
+            lines.append(f"- `{repo}`: _No issue comments found._")
     return "\n".join(lines)
 
 
@@ -197,14 +222,15 @@ def main() -> int:
     merged_counts = defaultdict(int)
     for repo_name, count in recent_public_activity(login, token):
         merged_counts[repo_name] += count
-    for repo_name, count in issue_comment_activity(login, token):
+    issue_rows, issue_links = issue_comment_activity(login, token)
+    for repo_name, count in issue_rows:
         merged_counts[repo_name] += count
 
     rows = sorted(merged_counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
     if not rows:
         rows = contributed_repositories(login, token)
 
-    section = build_section(rows)
+    section = build_section(rows, issue_links)
     update_readme(section)
     return 0
 
