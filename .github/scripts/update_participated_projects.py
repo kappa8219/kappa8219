@@ -78,9 +78,8 @@ def recent_public_activity(login: str, token: str, max_pages: int = 10) -> list[
 
 def issue_comment_activity(
     login: str, token: str, max_pages: int = 10
-) -> tuple[list[tuple[str, int]], dict[str, list[tuple[int, str]]]]:
+) -> list[tuple[str, int]]:
     counts = defaultdict(int)
-    issue_links = defaultdict(dict)
     query = f"commenter:{login} is:issue"
     for page in range(1, max_pages + 1):
         params = urllib.parse.urlencode(
@@ -104,17 +103,8 @@ def issue_comment_activity(
             repo = repository_url.split("/repos/", 1)[1]
             if repo and not is_owned_by_user(repo, login):
                 counts[repo] += 1
-                number = item.get("number")
-                html_url = item.get("html_url")
-                if isinstance(number, int) and isinstance(html_url, str):
-                    issue_links[repo][number] = html_url
 
-    sorted_counts = sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
-    sorted_links = {
-        repo: sorted(repo_links.items(), key=lambda it: it[0], reverse=True)
-        for repo, repo_links in issue_links.items()
-    }
-    return sorted_counts, sorted_links
+    return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
 
 
 def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
@@ -146,9 +136,7 @@ def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
     ]
 
 
-def build_section(
-    rows: list[tuple[str, int]], issue_links: dict[str, list[tuple[int, str]]], limit: int = 10
-) -> str:
+def build_section(rows: list[tuple[str, int]], limit: int = 10) -> str:
     if not rows:
         return "_No participation data found._"
 
@@ -172,10 +160,7 @@ def build_section(
             size = min_size + int((count / max_count) * (max_size - min_size))
         else:
             size = min_size
-        repo_issue_links = issue_links.get(repo, [])
-        issue_numbers = " ".join(f"#{number}" for number, _ in repo_issue_links[:4])
-        label = f"{repo}<br/>{issue_numbers}" if issue_numbers else repo
-        lines.append(f'  {node_id}["{label}"]:::tag')
+        lines.append(f'  {node_id}["{repo}"]:::tag')
         lines.append(f"  style {node_id} font-size:{size}px")
 
     for i, node_id in enumerate(node_ids):
@@ -216,15 +201,14 @@ def main() -> int:
     merged_counts = defaultdict(int)
     for repo_name, count in recent_public_activity(login, token):
         merged_counts[repo_name] += count
-    issue_rows, issue_links = issue_comment_activity(login, token)
-    for repo_name, count in issue_rows:
+    for repo_name, count in issue_comment_activity(login, token):
         merged_counts[repo_name] += count
 
     rows = sorted(merged_counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
     if not rows:
         rows = contributed_repositories(login, token)
 
-    section = build_section(rows, issue_links)
+    section = build_section(rows)
     update_readme(section)
     return 0
 
