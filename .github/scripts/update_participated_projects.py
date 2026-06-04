@@ -172,7 +172,10 @@ def build_section(
             size = min_size + int((count / max_count) * (max_size - min_size))
         else:
             size = min_size
-        lines.append(f'  {node_id}["{repo}"]:::tag')
+        repo_issue_links = issue_links.get(repo, [])
+        issue_numbers = " ".join(f"#{number}" for number, _ in repo_issue_links[:4])
+        label = f"{repo}<br/>{issue_numbers}" if issue_numbers else repo
+        lines.append(f'  {node_id}["{label}"]:::tag')
         lines.append(f"  style {node_id} font-size:{size}px")
 
     for i, node_id in enumerate(node_ids):
@@ -181,15 +184,6 @@ def build_section(
         if i + cols < len(node_ids):
             lines.append(f"  {node_id} --- {node_ids[i + cols]}")
     lines.append("```")
-    lines.append("")
-    lines.append("Issue links:")
-    for repo, _ in top_rows:
-        repo_issue_links = issue_links.get(repo, [])
-        if repo_issue_links:
-            links_text = ", ".join(f"[#{number}]({url})" for number, url in repo_issue_links[:5])
-            lines.append(f"- `{repo}`: {links_text}")
-        else:
-            lines.append(f"- `{repo}`: _No issue comments found._")
     return "\n".join(lines)
 
 
