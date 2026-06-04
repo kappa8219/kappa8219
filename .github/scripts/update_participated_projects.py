@@ -76,6 +76,33 @@ def recent_public_activity(login: str, token: str, max_pages: int = 10) -> list[
     return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
 
 
+def issue_comment_activity(login: str, token: str, max_pages: int = 10) -> list[tuple[str, int]]:
+    counts = defaultdict(int)
+    query = f"commenter:{login} is:issue"
+    for page in range(1, max_pages + 1):
+        params = urllib.parse.urlencode({"q": query, "per_page": 100, "page": page})
+        url = f"{REST_API}/search/issues?{params}"
+        result = api_get_json(url, token)
+        if not isinstance(result, dict):
+            break
+
+        items = result.get("items") or []
+        if not isinstance(items, list) or not items:
+            break
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            repository_url = item.get("repository_url")
+            if not isinstance(repository_url, str) or "/repos/" not in repository_url:
+                continue
+            repo = repository_url.split("/repos/", 1)[1]
+            if repo and not is_owned_by_user(repo, login):
+                counts[repo] += 1
+
+    return sorted(counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
+
+
 def contributed_repositories(login: str, token: str) -> list[tuple[str, int]]:
     query = """
     query($login: String!) {
@@ -167,7 +194,13 @@ def main() -> int:
         return 1
 
     login = repo.split("/")[0]
-    rows = recent_public_activity(login, token)
+    merged_counts = defaultdict(int)
+    for repo_name, count in recent_public_activity(login, token):
+        merged_counts[repo_name] += count
+    for repo_name, count in issue_comment_activity(login, token):
+        merged_counts[repo_name] += count
+
+    rows = sorted(merged_counts.items(), key=lambda it: (it[1], it[0].lower()), reverse=True)
     if not rows:
         rows = contributed_repositories(login, token)
 
