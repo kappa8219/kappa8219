@@ -1,0 +1,83 @@
+name: Update Contributions SVG
+
+on:
+  # 하루 3번 자동 실행 (UTC 00:00, 08:00, 16:00 = 한국시간 09:00, 17:00, 01:00)
+  schedule:
+    - cron: '0 0,8,16 * * *'
+  # 수동 실행 지원
+  workflow_dispatch:
+  # main/master 브랜치 push 시 실행
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'src/**'
+      - 'featured-prs.json'
+      - '.github/workflows/update-contributions.yml'
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate contributions SVG
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 설정 옵션 (Settings > Secrets and variables > Actions > Variables에서 설정)
+          THEME: ${{ vars.THEME || 'light' }}
+          AUTO_THEME: ${{ vars.AUTO_THEME || 'false' }}
+          MAX_REPOS: ${{ vars.MAX_REPOS || '6' }}
+          TITLE: ${{ vars.TITLE || 'Open-Source Contributions' }}
+          SORT_BY: ${{ vars.SORT_BY || 'date' }}
+          MONTHS_AGO: ${{ vars.MONTHS_AGO || '' }}
+          EXCLUDE_ORGS: ${{ vars.EXCLUDE_ORGS || '' }}
+          INCLUDE_ORGS: ${{ vars.INCLUDE_ORGS || '' }}
+          FEATURED_PRS_PATH: ${{ vars.FEATURED_PRS_PATH || './featured-prs.json' }}
+          LOCALE: ${{ vars.LOCALE || 'en-US' }}
+          WIDTH: ${{ vars.WIDTH || '480' }}
+          HIDE_TITLE: ${{ vars.HIDE_TITLE || 'false' }}
+          HIDE_BORDER: ${{ vars.HIDE_BORDER || 'false' }}
+          OUTPUT_PATH: './contributions.svg'
+          PREVIEW_THEMES: 'dark'
+        run: node src/index.js
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add contributions*.svg
+          git diff --staged --quiet || git commit -m "chore: update contributions SVG [skip ci]"
+          git push
+
+      - name: Keepalive workflow (prevent 60-day auto-disable)
+        if: github.event_name == 'schedule'
+        run: |
+          # GitHub auto-disables scheduled workflows after 60 days of inactivity.
+          # If no commit has landed in 45+ days, push an empty commit to reset
+          # the counter. Implemented inline (no third-party action) so it works
+          # even when the repo restricts which Actions can be downloaded.
+          LAST_COMMIT_TIME=$(git log -1 --format=%ct)
+          NOW=$(date +%s)
+          DAYS_SINCE=$(( (NOW - LAST_COMMIT_TIME) / 86400 ))
+          echo "Days since last commit: $DAYS_SINCE"
+          if [ "$DAYS_SINCE" -ge 45 ]; then
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git commit --allow-empty -m "chore: keepalive [skip ci]"
+            git push
+            echo "Pushed keepalive empty commit"
+          else
+            echo "No keepalive needed (under 45-day threshold)"
+          fi

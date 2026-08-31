@@ -1,0 +1,323 @@
+<svg width="480" height="403" viewBox="0 0 480 403" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open-Source Contributions: 8 merged pull requests across 5 repositories" class="oss-card-c38ugu5rn" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Open-Source Contributions</title>
+  <desc>8 merged pull requests across 5 repositories, OSS score 180</desc>
+  <style>
+    .oss-card-c38ugu5rn .bg-start { stop-color: #e8f4fc; }
+    .oss-card-c38ugu5rn .bg-end { stop-color: #f0e6fa; }
+    .oss-card-c38ugu5rn .card-bg { fill: #1e2130; }
+    .oss-card-c38ugu5rn .card-border { stroke: #2a2f45; }
+    .oss-card-c38ugu5rn .icon-bg { fill: #2d3348; }
+    .oss-card-c38ugu5rn .title-text { fill: #1a1a2e; }
+    .oss-card-c38ugu5rn .subtitle-text { fill: #22c55e; }
+    .oss-card-c38ugu5rn .subtitle-icon { fill: #22c55e; }
+    .oss-card-c38ugu5rn .card-title { fill: #ffffff; }
+    .oss-card-c38ugu5rn .pr-number { fill: #60a5fa; }
+    .oss-card-c38ugu5rn .card-text { fill: #a0a3b1; }
+    .oss-card-c38ugu5rn .badge-bg { fill: #22c55e; }
+    .oss-card-c38ugu5rn .badge-text { fill: #ffffff; }
+    .oss-card-c38ugu5rn .date-icon { fill: #22c55e; }
+    .oss-card-c38ugu5rn .date-text { fill: #6b7280; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .oss-card-c38ugu5rn .card {
+      animation: fadeIn 0.4s ease-out forwards;
+      opacity: 0;
+    }
+    .oss-card-c38ugu5rn .card-0 { animation-delay: 0s; }
+    .oss-card-c38ugu5rn .card-1 { animation-delay: 0.1s; }
+    .oss-card-c38ugu5rn .card-2 { animation-delay: 0.2s; }
+    .oss-card-c38ugu5rn .card-3 { animation-delay: 0.30000000000000004s; }
+    .oss-card-c38ugu5rn .card-4 { animation-delay: 0.4s; }
+    .oss-card-c38ugu5rn .card-5 { animation-delay: 0.5s; }
+  </style>
+  <defs>
+    <linearGradient id="bgGrad-c38ugu5rn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" class="bg-start"/>
+      <stop offset="100%" class="bg-end"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="403" fill="url(#bgGrad-c38ugu5rn)" rx="16"/>
+  <g transform="translate(18, 23)">
+    <text class="title-text" font-size="18" font-weight="700">
+      Open-Source Contributions
+    </text>
+    <g transform="translate(0, 26)">
+      <svg width="16" height="16" viewBox="0 0 20 20"><g class="subtitle-icon"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></g></svg>
+      <text class="subtitle-text" x="20" y="12" font-size="12" font-weight="600">
+        8 PRs Merged · 5 Repos
+      </text>
+    </g>
+    <g transform="translate(364, 5)">
+      <rect class="badge-bg" width="80" height="24" rx="12"/>
+      <text class="badge-text" x="40" y="16" font-size="11" font-weight="800" text-anchor="middle">
+        Score: 180
+      </text>
+    </g>
+  </g>
+  <g transform="translate(18, 76)" class="card card-0">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-0">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIACgAKAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/ANKO7xZa5cKTHcCweJB13Y8tT+i1zvhmKN9Zs1Z9geOVmJ5xw2MVvwiWG28RyIALaC3nQs56b9yjHr9zFc/4akK6xaOsayFYXJDDrkGvOd7HTBbnbR28sXh++ntPMdiY49hAYyExj5QOv8VUdM0HU7Ozlnu7R4WIJycZwAOpGcd6l0G++yRyzSHzCshKqoyFOAAfrgfzp/iLxR5uj3KoXEsa7w3TBHIospIqNJtXMW3CyarbK0mUit2cFQRwCfu/XNavn23pd/m1ZWhXTTXiXN2pP/EuUnEe7y84YnGeOv61r/2jYf8APab/AL9L/jU7aIzsUrrU7IeENZiRg813AioiqeD50p/QEGsHwmyw6zE9xu2CMqSO2eB+FV7yYwQFXBwQ3QcghmA/nWlYaNqOn6NceIbyEW1iY1EbOfmk3EAEL6c9TitFzT0SBNRTL2p2VnBZLKXkW2S73s0ZIPKK238cmsCyaJWLCeWZJycRSOSBn1Fdb4ctBqngC+CZPmXZeAyc8quM/TOR+dYGg6PqE2uxrcWzW3k9WUdM9Cp71bpSRtTqLlsJppktG1NrU4Q2oifIHIx05rP+0Sen/j1bN7by2XiTUtFDIs88uIYgoUMG5VQT7ED68VJ/whOu/wDQMb/v4n/xVYuE09UZqaerZS8LaedX1Y288X+iJGJJgf4hvUhfxK4+ma6H4r6ukHgx7cyfPc3MaKo7Bct/QVU8B/8AIRv/APr3j/8AQjWV8YP+QNYf9fTf+gV2Yde5cxnud34RsGsfBOl2r5Utbh5B0IL5c/jlqupYW8CoYU2SISA6Eq2CeeRUunf8gaz/AOuEf/oIqTsP97/GtiTzj4oWSy/YNbtrgI8ZNtLID91h8yZPb+Lk+orz3+0dV/6DC/8AgUP8a9C8e/8AIiX/AP2E1/8AQRXjdC1CSsz/2Q==" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-0)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      phracek/pycharm-com...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #112
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      fix: match PyCharm 2026.2 wi...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Merged
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        Jul 31, 2026
+      </text>
+    </g>
+  </g>
+  <g transform="translate(246, 76)" class="card card-1">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-1">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,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" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-1)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      kubernetes-sigs/aws...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #4860
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      docs: clarify scheme change ...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Tests
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        Jul 29, 2026
+      </text>
+    </g>
+  </g>
+  <g transform="translate(18, 183)" class="card card-2">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-2">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,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" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-2)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      freelensapp/freelen...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #70
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      Remove duplicate Hostnames r...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Merged
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        Jul 10, 2026
+      </text>
+    </g>
+  </g>
+  <g transform="translate(246, 183)" class="card card-3">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-3">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,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" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-3)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      freelensapp/freelen...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #43
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      Fix gateway addresses column...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Merged
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        Jun 30, 2026
+      </text>
+    </g>
+  </g>
+  <g transform="translate(18, 290)" class="card card-4">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-4">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,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" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-4)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      freelensapp/freelen...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #2016
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      Fix extension installs when ...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Merged
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        Jun 26, 2026
+      </text>
+    </g>
+  </g>
+  <g transform="translate(246, 290)" class="card card-5">
+    <rect class="card-bg" width="216" height="95" rx="12"/>
+    <rect class="card-border" width="216" height="95" rx="12" fill="none" stroke-width="1"/>
+
+    <!-- Repo Icon -->
+    <g transform="translate(14, 14)">
+      <defs>
+        <clipPath id="circleView-c38ugu5rn-5">
+          <circle cx="14" cy="14" r="14"/>
+        </clipPath>
+      </defs>
+      <circle class="icon-bg" cx="14" cy="14" r="14"/>
+      <image href="data:image/png;base64,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" x="0" y="0" width="28" height="28" clip-path="url(#circleView-c38ugu5rn-5)"/>
+    </g>
+
+    <!-- Repo Name & PR Number -->
+    <text class="card-title" x="50" y="22" font-size="12" font-weight="600">
+      freelensapp/freelen...
+    </text>
+    <text class="pr-number" x="50" y="38" font-size="11" font-weight="500">
+      #1840
+    </text>
+
+    <!-- PR Title -->
+    <text class="card-text" x="50" y="52" font-size="10">
+      Support pod-level resize edi...
+    </text>
+
+    <!-- Contribution Type Badge -->
+    <g transform="translate(14, 70)">
+      <rect class="badge-bg" width="65" height="18" rx="4"/>
+      <text class="badge-text" x="32.5" y="13" font-size="9" font-weight="700" text-anchor="middle">
+        Feature
+      </text>
+    </g>
+
+    <!-- Date -->
+    <g transform="translate(85, 70)">
+      <svg width="12" height="12" viewBox="0 0 20 20"><g class="date-icon"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></g></svg>
+      <text class="date-text" x="16" y="10" font-size="9">
+        May 4, 2026
+      </text>
+    </g>
+  </g>
+</svg>
