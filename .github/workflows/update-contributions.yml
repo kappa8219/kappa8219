@@ -38,7 +38,7 @@ jobs:
           # 설정 옵션 (Settings > Secrets and variables > Actions > Variables에서 설정)
           THEME: ${{ vars.THEME || 'light' }}
           AUTO_THEME: ${{ vars.AUTO_THEME || 'false' }}
-          MAX_REPOS: ${{ vars.MAX_REPOS || '6' }}
+          MAX_REPOS: ${{ vars.MAX_REPOS || '10' }}
           TITLE: ${{ vars.TITLE || 'Open-Source Contributions' }}
           SORT_BY: ${{ vars.SORT_BY || 'date' }}
           MONTHS_AGO: ${{ vars.MONTHS_AGO || '' }}
@@ -46,7 +46,7 @@ jobs:
           INCLUDE_ORGS: ${{ vars.INCLUDE_ORGS || '' }}
           FEATURED_PRS_PATH: ${{ vars.FEATURED_PRS_PATH || './featured-prs.json' }}
           LOCALE: ${{ vars.LOCALE || 'en-US' }}
-          WIDTH: ${{ vars.WIDTH || '480' }}
+          WIDTH: ${{ vars.WIDTH || '960' }}
           HIDE_TITLE: ${{ vars.HIDE_TITLE || 'false' }}
           HIDE_BORDER: ${{ vars.HIDE_BORDER || 'false' }}
           OUTPUT_PATH: './contributions.svg'
