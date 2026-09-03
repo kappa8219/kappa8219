@@ -1,5 +1,1 @@
 **Tech stack:** **AWS, GCloud, Exoscale; Kubernetes; Flux CD; Kustomize; Helm; Terraform and OpenTofu; GitLab CI/CD; Docker, Podman; NGINX Ingress and Gateway; Fabric; Cilium; Kyverno; Debezium; Apache Kafka/MSK; RabbitMQ; OpenSearch; Prometheus, Grafana stack, Fluent Bit; Airflow; MLflow; Ollama, vLLM, LocalAI; Gitea, Forgejo; Twingate, Tailscale**
-
-## Open Source Contributions
-
-![My Contributions](./contributions.svg)
