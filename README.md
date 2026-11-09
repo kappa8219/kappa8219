@@ -7,14 +7,14 @@
 ## Starred projects released in the last year
 
 <!--START_SECTION:starred-projects-->
-_Showing the 30 most recently starred of 471 starred repositories whose latest release was published in the past 365 days (700 starred repositories checked). [Complete filtered list](./starred-projects.md)._
+_Showing the 30 most recently starred of 471 starred repositories whose latest release was published in the past 365 days (701 starred repositories checked). [Complete filtered list](./starred-projects.md)._
 
 ```mermaid
 flowchart TB
   classDef hub fill:#ddf4ff,stroke:#54aeff,color:#0969da;
   classDef language fill:#f6f8fa,stroke:#d0d7de,color:#24292f;
   classDef project fill:#ffffff,stroke:#d0d7de,color:#24292f;
-  hub(("⭐ Showing 30 of 471 matching projects; 700 stars checked"))
+  hub(("⭐ Showing 30 of 471 matching projects; 701 stars checked"))
   class hub hub;
   lang1["C · 1"]
   class lang1 language;
@@ -25,7 +25,7 @@ flowchart TB
   lang2["C++ · 1"]
   class lang2 language;
   hub --> lang2
-  p2_1["electron/electron · 2026-10-31"]
+  p2_1["electron/electron · 2026-11-04"]
   lang2 --> p2_1
   class p2_1 project;
   lang3["Clojure · 1"]
@@ -67,7 +67,7 @@ flowchart TB
   lang6["Java · 1"]
   class lang6 language;
   hub --> lang6
-  p6_1["strimzi/strimzi-kafka-operator · 2026-10-12"]
+  p6_1["strimzi/strimzi-kafka-operator · 2026-11-04"]
   lang6 --> p6_1
   class p6_1 project;
   lang7["JavaScript · 2"]
@@ -88,13 +88,13 @@ flowchart TB
   lang9["Python · 6"]
   class lang9 language;
   hub --> lang9
-  p9_1["sparfenyuk/mcp-proxy · 2026-11-02"]
+  p9_1["sparfenyuk/mcp-proxy · 2026-11-07"]
   lang9 --> p9_1
   class p9_1 project;
-  p9_2["Twingate-Labs/Twingate-CLI · 2026-11-02"]
+  p9_2["Twingate-Labs/Twingate-CLI · 2026-11-06"]
   lang9 --> p9_2
   class p9_2 project;
-  p9_3["gke-labs/kube-agents · 2026-10-31"]
+  p9_3["gke-labs/kube-agents · 2026-11-08"]
   lang9 --> p9_3
   class p9_3 project;
   p9_4["aws-bench/aws-bench · 2026-10-20"]
@@ -118,7 +118,7 @@ flowchart TB
   lang11["TypeScript · 7"]
   class lang11 language;
   hub --> lang11
-  p11_1["withastro/astro · 2026-11-02"]
+  p11_1["withastro/astro · 2026-11-05"]
   lang11 --> p11_1
   class p11_1 project;
   p11_2["freelensapp/freelens-for-claude-extension · 2026-10-29"]
@@ -127,7 +127,7 @@ flowchart TB
   p11_3["freelensapp/freelens-gpu-extension · 2026-10-30"]
   lang11 --> p11_3
   class p11_3 project;
-  p11_4["openchamber/openchamber · 2026-11-02"]
+  p11_4["openchamber/openchamber · 2026-11-08"]
   lang11 --> p11_4
   class p11_4 project;
   p11_5["jmaver-plume/kafkajs-msk-iam-authentication-mechanism · 2026-05-12"]
