@@ -7,25 +7,25 @@
 ## Starred projects released in the last year
 
 <!--START_SECTION:starred-projects-->
-_Showing the 30 most recently starred of 469 starred repositories whose latest release was published in the past 365 days (702 starred repositories checked). [Complete filtered list](./starred-projects.md)._
+_Showing the 30 most recently starred of 469 starred repositories whose latest release was published in the past 365 days (703 starred repositories checked). [Complete filtered list](./starred-projects.md)._
 
 ```mermaid
 flowchart TB
   classDef hub fill:#ddf4ff,stroke:#54aeff,color:#0969da;
   classDef language fill:#f6f8fa,stroke:#d0d7de,color:#24292f;
   classDef project fill:#ffffff,stroke:#d0d7de,color:#24292f;
-  hub(("⭐ Showing 30 of 469 matching projects; 702 stars checked"))
+  hub(("⭐ Showing 30 of 469 matching projects; 703 stars checked"))
   class hub hub;
   lang1["C · 1"]
   class lang1 language;
   hub --> lang1
-  p1_1["JustVugg/colibri · 2026-10-31"]
+  p1_1["JustVugg/colibri · 2026-11-22"]
   lang1 --> p1_1
   class p1_1 project;
   lang2["C++ · 1"]
   class lang2 language;
   hub --> lang2
-  p2_1["electron/electron · 2026-11-14"]
+  p2_1["electron/electron · 2026-11-19"]
   lang2 --> p2_1
   class p2_1 project;
   lang3["Clojure · 1"]
@@ -34,30 +34,33 @@ flowchart TB
   p3_1["logseq/logseq · 2026-10-07"]
   lang3 --> p3_1
   class p3_1 project;
-  lang4["Go · 7"]
+  lang4["Go · 8"]
   class lang4 language;
   hub --> lang4
-  p4_1["jkroepke/access-log-exporter · 2026-10-22"]
+  p4_1["andronaft/jvm-fit · 2026-11-20"]
   lang4 --> p4_1
   class p4_1 project;
-  p4_2["NVIDIA/aicr · 2026-11-02"]
+  p4_2["jkroepke/access-log-exporter · 2026-10-22"]
   lang4 --> p4_2
   class p4_2 project;
-  p4_3["juanfont/headscale · 2026-10-30"]
+  p4_3["NVIDIA/aicr · 2026-11-17"]
   lang4 --> p4_3
   class p4_3 project;
-  p4_4["kubernetes-sigs/cloud-provider-kind · 2026-10-02"]
+  p4_4["juanfont/headscale · 2026-10-30"]
   lang4 --> p4_4
   class p4_4 project;
-  p4_5["netbirdio/netbird · 2026-11-13"]
+  p4_5["kubernetes-sigs/cloud-provider-kind · 2026-10-02"]
   lang4 --> p4_5
   class p4_5 project;
-  p4_6["tailscale/tailscale · 2026-11-12"]
+  p4_6["netbirdio/netbird · 2026-11-20"]
   lang4 --> p4_6
   class p4_6 project;
-  p4_7["kubernetes-sigs/lws · 2026-10-16"]
+  p4_7["tailscale/tailscale · 2026-11-12"]
   lang4 --> p4_7
   class p4_7 project;
+  p4_8["kubernetes-sigs/lws · 2026-10-16"]
+  lang4 --> p4_8
+  class p4_8 project;
   lang5["HCL · 1"]
   class lang5 language;
   hub --> lang5
@@ -70,40 +73,37 @@ flowchart TB
   p6_1["strimzi/strimzi-kafka-operator · 2026-11-04"]
   lang6 --> p6_1
   class p6_1 project;
-  lang7["JavaScript · 2"]
+  lang7["JavaScript · 1"]
   class lang7 language;
   hub --> lang7
   p7_1["mindcraft-bots/mindcraft · 2026-03-20"]
   lang7 --> p7_1
   class p7_1 project;
-  p7_2["usebruno/bruno · 2026-10-22"]
-  lang7 --> p7_2
-  class p7_2 project;
   lang8["Lean · 1"]
   class lang8 language;
   hub --> lang8
-  p8_1["leanprover/lean4 · 2026-10-12"]
+  p8_1["leanprover/lean4 · 2026-11-16"]
   lang8 --> p8_1
   class p8_1 project;
   lang9["Python · 6"]
   class lang9 language;
   hub --> lang9
-  p9_1["sparfenyuk/mcp-proxy · 2026-11-07"]
+  p9_1["bmad-code-org/BMAD-METHOD · 2026-10-14"]
   lang9 --> p9_1
   class p9_1 project;
-  p9_2["Twingate-Labs/Twingate-CLI · 2026-11-06"]
+  p9_2["sparfenyuk/mcp-proxy · 2026-11-07"]
   lang9 --> p9_2
   class p9_2 project;
-  p9_3["gke-labs/kube-agents · 2026-11-15"]
+  p9_3["Twingate-Labs/Twingate-CLI · 2026-11-18"]
   lang9 --> p9_3
   class p9_3 project;
-  p9_4["aws-bench/aws-bench · 2026-10-20"]
+  p9_4["gke-labs/kube-agents · 2026-11-22"]
   lang9 --> p9_4
   class p9_4 project;
-  p9_5["triton-inference-server/server · 2026-11-02"]
+  p9_5["aws-bench/aws-bench · 2026-10-20"]
   lang9 --> p9_5
   class p9_5 project;
-  p9_6["aws/tools-for-devops-agent · 2026-09-25"]
+  p9_6["triton-inference-server/server · 2026-11-17"]
   lang9 --> p9_6
   class p9_6 project;
   lang10["Rust · 2"]
@@ -112,13 +112,13 @@ flowchart TB
   p10_1["cjpais/Handy · 2026-11-14"]
   lang10 --> p10_1
   class p10_1 project;
-  p10_2["leanprover/elan · 2026-08-25"]
+  p10_2["leanprover/elan · 2026-11-18"]
   lang10 --> p10_2
   class p10_2 project;
   lang11["TypeScript · 7"]
   class lang11 language;
   hub --> lang11
-  p11_1["withastro/astro · 2026-11-13"]
+  p11_1["withastro/astro · 2026-11-18"]
   lang11 --> p11_1
   class p11_1 project;
   p11_2["freelensapp/freelens-for-claude-extension · 2026-10-29"]
@@ -127,7 +127,7 @@ flowchart TB
   p11_3["freelensapp/freelens-gpu-extension · 2026-10-30"]
   lang11 --> p11_3
   class p11_3 project;
-  p11_4["openchamber/openchamber · 2026-11-15"]
+  p11_4["openchamber/openchamber · 2026-11-22"]
   lang11 --> p11_4
   class p11_4 project;
   p11_5["jmaver-plume/kafkajs-msk-iam-authentication-mechanism · 2026-05-12"]
